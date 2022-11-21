@@ -5,5 +5,4 @@ export interface Book {
     authors: string,
     favorite: string,
     fileCover: string,
-
 }
