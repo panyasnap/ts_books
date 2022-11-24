@@ -6,7 +6,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import {ConfigModule} from '@nestjs/config'
 
 @Module({
-  imports: [BookModule, ConfigModule.forRoot(), MongooseModule.forRoot(process.env.MONGO_CONNECTION)],
+  imports: [BookModule, ConfigModule.forRoot(), MongooseModule.forRoot("mongodb://root:example@mongo:27017/")],
   controllers: [AppController],
   providers: [AppService],
 })
