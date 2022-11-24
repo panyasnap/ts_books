@@ -19,7 +19,7 @@ export class BookController {
     public update(
         @Param() {id}: IParamId,
         @Body() book: Book): QueryWithHelpers<HydratedDocument<BookDocument, {}, {}> | null, HydratedDocument<BookDocument, {}, {}>, {}, BookDocument> {
-        return this.bookService.update(id, book);
+        return this.bookService.update(id, book) ;
     }
 
     @Get()
