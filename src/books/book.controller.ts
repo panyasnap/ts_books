@@ -1,4 +1,4 @@
-import {Body, Controller, Delete, Get, Param, Post, Put, UsePipes} from "@nestjs/common";
+import {Body, Controller, Delete, Get, Param, Post, Put, UsePipes, ValidationPipe} from "@nestjs/common";
 import {BookService} from "./book.service";
 import {Book} from "../interfaces/book.interface";
 import {BookDocument} from "../schemas/book.schema";
