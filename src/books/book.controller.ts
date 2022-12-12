@@ -7,6 +7,7 @@ import {IParamId} from "../interfaces/param-id";
 import {LoggingInterceptor} from "../app.logging.interceptor";
 import {bookCreateSchema} from "../validation/schemas/register.schema";
 
+
 @Controller('books')
 export class BookController {
     constructor(private readonly bookService: BookService) {
@@ -38,4 +39,5 @@ export class BookController {
     public delete(@Param() {id}: IParamId): QueryWithHelpers<HydratedDocument<BookDocument, {}, {}> | null, HydratedDocument<BookDocument, {}, {}>, {}, BookDocument> {
         return this.bookService.delete(id)
     }
+
 }
